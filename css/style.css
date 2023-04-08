@@ -86,6 +86,10 @@ header {
     width: 90%;
     background-color: #e34f26;
   }
+  .html {
+    width: 90%;
+    background-color: #e34f26;
+  }
 
   footer {
   background-color: #548073;
@@ -136,7 +140,7 @@ header {
     background-color: #f5f5f5;
     border-radius: 5px;
     padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s;
   }
@@ -182,6 +186,8 @@ header {
    .about-me {
     padding: 2rem 0;
   }
+
+  
   
   .about-me-content {
     display: flex;
@@ -222,4 +228,93 @@ header {
       flex-direction: column;
     }
   }
+
+  /* Define the fade-in animation */
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
   
+  /* Apply the animation to the skill containers */
+    .skill-container {
+        animation: fadeIn 1s ease-in-out;
+    }
+  .progress-bar {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .progress {
+    height: 30px;
+    background-color: #548073;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .progress-label {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 2;
+    position: relative;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: bold;
+
+  }
+  
+  
+  .thumbnail {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .thumbnail-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  main {
+    opacity: 0;
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s; /* Adjust this value to control when the animation starts */
+  }
+  .skills{
+    background-color: #f5f5f5;
+    box-shadow: darkgray 30px 30px 30px 30px;
+  }
